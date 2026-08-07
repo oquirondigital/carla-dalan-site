@@ -242,8 +242,8 @@
         <p>Telefone: (49) 99991-9962<br>WhatsApp: <a href="https://wa.me/49999919962">(49) 99991-9962</a></p>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Carla Dalan &middot; Desenvolvido por <a href="https://oquirondigital.com.br/" style="color:#9999ff;">Oquíron Digital.</a></p>
+    <div class="container" style="text-align:center; border-top:1px solid #222; padding-top:20px;">
+      &copy; <span id="year"></span> Carla Dalan &middot; Desenvolvido por <a href="https://oquirondigital.com.br/" style="color:#9999ff;">Oquíron Digital</a>
     </div>
   </footer>
 
@@ -253,6 +253,7 @@
   </a>
 
   <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
 </body>

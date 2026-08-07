@@ -290,7 +290,6 @@ img {
 
 .stat-banner {
   padding: 40px 0;
-  background: var(--bg-black);
 }
 
 .stat-banner .container {
@@ -354,7 +353,6 @@ img {
 
 .testimonials-section {
   padding: 60px 0;
-  background: var(--bg-black);
 }
 
 .testimonials-grid {
@@ -440,19 +438,13 @@ img {
   order: 1;
 }
 
-.resultado-section {
-  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.4) 15%, rgba(0, 0, 0, 0.4) 85%, transparent);
-  padding: 60px 0;
-}
-
-/* Photo on the left, slightly larger than the standard 1fr/1fr split */
+/* Photo on the left, ~25% larger than the standard 1fr/1fr split */
 .bio-row.photo-left {
-  grid-template-columns: 4fr 3fr;
+  grid-template-columns: 5fr 3fr;
 }
 
 .bio-row.photo-left .bio-photo {
   order: 1;
-  margin-bottom: 40px;
 }
 
 .bio-row.photo-left .bio-text {
@@ -463,10 +455,6 @@ img {
   width: 100%;
   border-radius: 12px;
   object-fit: cover;
-}
-
-.bio-photo {
-  margin-bottom: 40px;
 }
 
 .bio-photo.split {
@@ -569,15 +557,6 @@ img {
 
 .footer-col a {
   color: #9999ff;
-}
-
-.footer-bottom {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 0 24px;
-  text-align: center;
-  border-top: 1px solid #222;
-  padding-top: 20px;
 }
 
 /* ---------- Symptoms grid ---------- */
@@ -1453,7 +1432,7 @@ img {
   margin-bottom: 30px;
 }
 
-.pricing-offer-card {
+.offer-card {
   background: linear-gradient(135deg, #2a0f45, #1a0830);
   border: 1px solid var(--accent-purple);
   border-radius: 12px;
@@ -1462,13 +1441,13 @@ img {
   padding: 40px 30px;
 }
 
-.pricing-offer-card h3 {
+.offer-card h3 {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.8rem;
 }
 
-.pricing-offer-card .badge {
+.offer-card .badge {
   color: var(--accent-orange);
   font-weight: 700;
   letter-spacing: 1px;
@@ -1476,19 +1455,19 @@ img {
   display: block;
 }
 
-.pricing-offer-card .old-price {
+.offer-card .old-price {
   text-decoration: line-through;
   color: var(--text-muted);
 }
 
-.pricing-offer-card .price {
+.offer-card .price {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 3rem;
   margin: 8px 0;
 }
 
-.pricing-offer-card .installments {
+.offer-card .installments {
   color: var(--text-muted);
   font-size: 0.85rem;
   margin-bottom: 24px;
