@@ -1,0 +1,562 @@
+/* ===================================================
+   Carla Dalan — shared stylesheet
+   Brand tokens taken from the original site
+   =================================================== */
+
+:root {
+  --bg-dark: #240C39;
+  --bg-black: #000000;
+  --accent-orange: #F79A2F;
+  --accent-purple: #b02dff;
+  --text-white: #FFFFFF;
+  --text-muted: #A4A4A4;
+  --text-muted-2: #9D9D9D;
+  --font-display: 'Dosis', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-dark);
+  color: var(--text-white);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  background: var(--bg-dark);
+  padding: 16px 50px;
+}
+
+.site-header .container {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header .logo img {
+  width: 160px;
+  height: auto;
+}
+
+.nav-cta {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--text-white);
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-cta::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--accent-orange);
+  transition: width 0.3s ease;
+}
+
+.nav-cta:hover::after {
+  width: 100%;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.hero .container {
+  max-width: 1000px;
+}
+
+.hero-content {
+  max-width: 620px;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.hero-title strong {
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-top: 20px;
+  line-height: 1.4;
+}
+
+.hero-subtitle strong {
+  color: var(--text-white);
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-white);
+  background: var(--accent-orange);
+  border-radius: 30px;
+  padding: 18px 36px;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.37);
+  transition: background 0.3s ease, transform 0.15s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover {
+  background: var(--accent-purple);
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  padding: 12px 22px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+}
+
+.material-icons {
+  font-size: 20px;
+}
+
+/* ---------- Welcome / section heading ---------- */
+
+.welcome-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 0;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* ---------- Offer cards grid ---------- */
+
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px 0;
+}
+
+.offer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.offer-card img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border: 3px solid var(--bg-black);
+  border-radius: 5px;
+  margin-bottom: 24px;
+}
+
+.offer-card-body {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.33), var(--bg-dark));
+  border-radius: 8px;
+  padding: 20px 16px 32px;
+  width: 100%;
+  max-width: 340px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.offer-card .material-icons {
+  font-size: 34px;
+  color: var(--accent-purple);
+  margin-bottom: 8px;
+}
+
+.offer-card h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.offer-card p {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.offer-card .btn {
+  margin-top: auto;
+}
+
+/* ---------- Stat banner ---------- */
+
+.stat-banner {
+  padding: 40px 0;
+}
+
+.stat-banner .container {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.stat-banner .material-icons {
+  font-size: 37px;
+  color: var(--accent-purple);
+}
+
+.stat-banner h2 {
+  font-family: 'Quicksand', var(--font-display), sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  letter-spacing: 1px;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  background: var(--bg-black);
+  padding: 40px 0;
+  text-align: center;
+  color: var(--text-muted-2);
+  font-size: 0.85rem;
+}
+
+/* ---------- WhatsApp floating button ---------- */
+
+#whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  background: #25D366;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease;
+}
+
+#whatsapp-float:hover {
+  transform: scale(1.08);
+}
+
+#whatsapp-float img {
+  width: 30px;
+  height: 30px;
+}
+
+/* ---------- Testimonials ---------- */
+
+.testimonials-section {
+  padding: 60px 0;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.testimonial-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.testimonial-card h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.testimonial-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ---------- Quote banner (Você nasceu para ser GRANDE) ---------- */
+
+.quote-banner {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.quote-banner .material-icons {
+  font-size: 32px;
+  color: var(--accent-purple);
+  vertical-align: middle;
+  margin-right: 12px;
+}
+
+.quote-banner p {
+  display: inline;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+/* ---------- Bio / two-column content sections ---------- */
+
+.bio-section {
+  padding: 40px 0 80px;
+}
+
+.bio-heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: var(--accent-purple);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.bio-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.bio-row.reverse .bio-photo {
+  order: 2;
+}
+
+.bio-row.reverse .bio-text {
+  order: 1;
+}
+
+.bio-photo img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.bio-photo.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.bio-text p {
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+.bio-text .highlight {
+  background: var(--accent-purple);
+  color: var(--text-white);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* ---------- Case de sucesso ---------- */
+
+.case-section {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 70px 0;
+}
+
+.case-title {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.case-title strong {
+  font-weight: 700;
+}
+
+.case-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.case-content img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.case-content h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.case-content p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* ---------- Footer contact ---------- */
+
+.footer-contact {
+  background: var(--bg-black);
+  padding: 50px 0 24px;
+}
+
+.footer-contact .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.footer-col .material-icons {
+  color: var(--accent-purple);
+  font-size: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.footer-col h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: inline;
+}
+
+.footer-col p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+.footer-col a {
+  color: #9999ff;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 960px) {
+  .offers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    padding: 16px 20px;
+  }
+
+  .offers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 420px;
+    text-align: center;
+  }
+
+  .hero-content {
+    margin: 0 auto;
+  }
+
+  .stat-banner .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bio-row,
+  .bio-row.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .bio-row.reverse .bio-photo,
+  .bio-row.reverse .bio-text {
+    order: initial;
+  }
+
+  .footer-contact .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .case-section {
+    background-attachment: scroll;
+  }
+}
