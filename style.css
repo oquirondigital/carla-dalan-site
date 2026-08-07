@@ -1111,6 +1111,351 @@ img {
   border-radius: 4px;
 }
 
+/* ---------- Course sections (O Destrave) ---------- */
+
+.course-about {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.course-about h2 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.course-about .lead {
+  max-width: 750px;
+  margin: 0 auto 30px;
+}
+
+.course-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 40px;
+  max-width: 900px;
+  margin: 0 auto 30px;
+  text-align: left;
+}
+
+.course-features .feature-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.course-features .material-icons {
+  color: var(--accent-purple);
+  flex-shrink: 0;
+}
+
+.course-features p {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+/* ---------- Who it's for (numbered) ---------- */
+
+.who-for-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.who-for-section h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+}
+
+.who-for-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.who-for-grid .num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: var(--accent-purple);
+}
+
+.who-for-grid p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* ---------- What is O Destrave (pill bars) ---------- */
+
+.what-is-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.what-is-section h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.pill-bar {
+  background: linear-gradient(90deg, var(--accent-purple), #8e44ad);
+  border-radius: 30px;
+  padding: 16px 30px;
+  max-width: 700px;
+  margin: 0 auto 16px;
+  font-size: 0.95rem;
+}
+
+/* ---------- Three pillars w/ photo ---------- */
+
+.pillars-photo-section {
+  padding: 60px 0;
+}
+
+.pillars-photo-section .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.pillars-photo-section img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.pillars-photo-section h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--accent-purple);
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.pillars-photo-section ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.pillars-photo-section li {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.pillars-photo-section .material-icons {
+  color: var(--accent-purple);
+}
+
+/* ---------- Modules grid ---------- */
+
+.modules-section {
+  padding: 60px 0;
+}
+
+.modules-tag {
+  display: block;
+  text-align: center;
+  background: var(--accent-purple);
+  max-width: 400px;
+  margin: 0 auto 40px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto 30px;
+}
+
+.module-card {
+  background: rgba(0,0,0,0.3);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.module-card h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--accent-purple);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.module-card h3 .material-icons {
+  font-size: 18px;
+}
+
+.module-card ul {
+  list-style: none;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.module-card li {
+  margin-bottom: 4px;
+}
+
+.modules-note {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 24px;
+}
+
+.modules-cta {
+  text-align: center;
+}
+
+/* ---------- Bonuses ---------- */
+
+.bonus-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.bonus-section h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.bonus-section .lead {
+  max-width: 650px;
+  margin: 0 auto 30px;
+}
+
+.bonus-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.bonus-grid li {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.bonus-grid .material-icons {
+  color: var(--accent-purple);
+  flex-shrink: 0;
+}
+
+/* ---------- Pricing offer ---------- */
+
+.offer-section {
+  padding: 40px 0 60px;
+  text-align: center;
+}
+
+.offer-section > .container > h2 {
+  font-family: var(--font-display);
+  color: var(--accent-purple);
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+}
+
+.offer-card {
+  background: linear-gradient(135deg, #2a0f45, #1a0830);
+  border: 1px solid var(--accent-purple);
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 40px 30px;
+}
+
+.offer-card h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.offer-card .badge {
+  color: var(--accent-orange);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.offer-card .old-price {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.offer-card .price {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 8px 0;
+}
+
+.offer-card .installments {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 24px;
+}
+
+.offer-guarantee {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+  margin: 24px 0;
+}
+
+.offer-guarantee .big-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: var(--accent-purple);
+  line-height: 1;
+}
+
+.offer-guarantee p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ---------- Certifications v2 (about the instructor) ---------- */
+
+.about-instructor {
+  padding: 60px 0;
+}
+
+.about-instructor h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--accent-purple);
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 960px) {
@@ -1191,5 +1536,13 @@ img {
 
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .course-features,
+  .who-for-grid,
+  .pillars-photo-section .container,
+  .modules-grid,
+  .bonus-grid {
+    grid-template-columns: 1fr;
   }
 }
