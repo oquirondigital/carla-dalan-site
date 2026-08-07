@@ -3,6 +3,42 @@
    Brand tokens taken from the original site
    =================================================== */
 
+@font-face {
+  font-family: 'Dosis';
+  src: url('assets/fonts/Dosis-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'Dosis';
+  src: url('assets/fonts/Dosis-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Dosis';
+  src: url('assets/fonts/Dosis-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Dosis';
+  src: url('assets/fonts/Dosis-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Dosis';
+  src: url('assets/fonts/Dosis-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Dosis';
+  src: url('assets/fonts/Dosis-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Dosis';
+  src: url('assets/fonts/Dosis-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+}
+
 :root {
   --bg-dark: #240C39;
   --bg-black: #000000;
@@ -204,10 +240,9 @@ img {
 }
 
 .offer-card img {
-  width: 260px;
-  height: 260px;
+  width: 350px;
+  height: 350px;
   object-fit: cover;
-  border: 3px solid var(--bg-black);
   border-radius: 5px;
   margin-bottom: 24px;
 }
@@ -261,6 +296,7 @@ img {
   max-width: 1200px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 16px;
 }
 
@@ -338,12 +374,16 @@ img {
   font-weight: 700;
   font-size: 1.1rem;
   margin-bottom: 8px;
+  padding: 0 12px;
 }
 
 .testimonial-card p {
   font-size: 0.9rem;
   color: var(--text-muted);
   line-height: 1.6;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.35), transparent);
+  padding: 12px;
+  border-radius: 0 0 8px 8px;
 }
 
 /* ---------- Quote banner (Você nasceu para ser GRANDE) ---------- */
@@ -396,6 +436,19 @@ img {
 
 .bio-row.reverse .bio-text {
   order: 1;
+}
+
+/* Photo on the left, ~25% larger than the standard 1fr/1fr split */
+.bio-row.photo-left {
+  grid-template-columns: 5fr 3fr;
+}
+
+.bio-row.photo-left .bio-photo {
+  order: 1;
+}
+
+.bio-row.photo-left .bio-text {
+  order: 2;
 }
 
 .bio-photo img {
@@ -1492,12 +1545,15 @@ img {
   }
 
   .bio-row,
-  .bio-row.reverse {
+  .bio-row.reverse,
+  .bio-row.photo-left {
     grid-template-columns: 1fr;
   }
 
   .bio-row.reverse .bio-photo,
-  .bio-row.reverse .bio-text {
+  .bio-row.reverse .bio-text,
+  .bio-row.photo-left .bio-photo,
+  .bio-row.photo-left .bio-text {
     order: initial;
   }
 
@@ -1545,4 +1601,22 @@ img {
   .bonus-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ---------- Font weight pass: Bold titles / Light body copy ---------- */
+
+h1, h2, h3, h4,
+.hero-title, .section-title, .bio-heading, .case-title,
+.pillar-card h3, .module-card h3, .offer-card h3, .testimonial-card h4,
+.symptoms-title, .footer-col h4, .modules-tag, .now-you-banner .tag,
+.quote-banner p, .quote-banner-lg p, .how-title, .guarantee-section h2,
+.who-for-section h2, .what-is-section h2, .course-about h2,
+.bonus-section h2, .about-instructor h2, .cert-section h3,
+.offer-card h3, .mentor-intro h2, .top-banner p, .stat-banner h2,
+.btn, .nav-cta {
+  font-weight: 700;
+}
+
+body, p, li, .hero-subtitle, .lead {
+  font-weight: 300;
 }
